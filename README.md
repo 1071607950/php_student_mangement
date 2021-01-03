@@ -1,0 +1,2 @@
+# php_student_mangement
+基于php实现的学生信息管理系统
