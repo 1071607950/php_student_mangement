@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <title>管理员添加学生</title>
+    <link href="style/css/foundation.min.css" rel="stylesheet" />
+    <link href="style/css/custom.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h1><a href="login.html">Home</a></h1>
+
+        </li>
+    </ul>
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <!-- Left Nav Section -->
+        <ul class="left">
+            <li><a href="admin_index.html">Administrator</a></li>
+            <li><a href="query_stu.html">Query Student</a> </li>
+
+            <li><a href="query_all_stu.php">Query All Student</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="https://github.com/1071607950">Fork me on GitHub</a></li>
+        </ul>
+    </section>
+</nav>
+<header>
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>管理员添加学生</h2>
+            <h4>填写完所有信息后点击提交</h4>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <form action="add_stu.php" method="post" enctype="multipart/form-data" class="large-4 large-offset-4">
+
+            <label>Name</label>
+            <input type="text" name="name"/>
+            <label>Class</label>
+            <select name="class">
+                <option name="0" value="0">无</option>
+                <option name="1" value="1">1</option>
+                <option name="2" value="2">2</option>
+            </select>
+            <label>Student Number</label>
+            <input type="number" name="stu_number"/>
+            <label>Sex</label>
+            <input id="male" type="radio" name="sex" value="male"/>
+            <label for="male">Male</label>
+            <input id="female" type="radio" name="sex" value="female" />
+            <label for="female"> Female</label><br>
+            <label>Hobby</label>
+            <input id="cs" type="checkbox" name="internet[]" value="cs"/>
+            <label for="cs">CS</label>
+            <br>
+            <input id="economics" type="checkbox" name="internet[]" value="economics"/>
+            <label for="economics">Economics</label>
+            <br>
+            <input id="trip" type="checkbox" name="internet[]" value="trip"/>
+            <label for="trip">Trip</label>
+            <br>
+            <input id="sleep" type="checkbox" name="internet[]" value="sleep"/>
+            <label for="sleep">Sleep</label>
+            <label>Grades</label>
+            <input type="number" name="grades" min="0" max="100"/><br>
+            <input class="small radius button left" type="submit" value="submit">
+            <input class="small radius button right" type="reset" value="reset">
+
+        </form>
+</div>
+</body>
+</html>
